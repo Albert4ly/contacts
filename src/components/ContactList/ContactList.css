@@ -1,0 +1,50 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.listOfItems{
+   padding-top: 40px;
+}
+
+.itemCnt {
+   border: 2px solid brown;
+   border-radius: 5px;
+   width: 400px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   height: 154px;
+   margin-bottom: 5px;
+   margin-left: 2px;
+   padding: 2px 2px;
+}
+
+.itemDescript {
+   display: flex;
+}
+
+.avatar__itemDescript {
+   width: 50px;
+   height: 50px;
+   background-color: rgb(237, 247, 247);
+   margin-right: 10px;
+   border: none;
+}
+
+.itemMainData {
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+.deleteBtn {
+   background-color: transparent;
+   color: #000;
+   border: 2px solid brown;
+   border-radius: none;
+   margin-bottom: 3px;
+   width: 88px;
+   position: absolute;
+   right: 3px;
+   bottom: 3px;
+}
