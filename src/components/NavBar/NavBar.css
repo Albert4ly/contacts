@@ -1,5 +1,6 @@
 .navCnt {
    height: 66px;
    width: 100%;
-   background-color: blue;
+   background-color: #393030;
+   border-bottom: 2px solid #952a2a;
 }
