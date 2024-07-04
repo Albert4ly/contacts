@@ -26,7 +26,7 @@ const PersonalCard = ( props ) => {
          </div>
          <hr />
          <div className='itemMainData'>
-            <p className='itemPhoneNr__itemMainData'>{props.tel}</p>
+            { props.tel !== undefined ? <p className='itemPhoneNr__itemMainData'>{props.tel}</p> : null }
             { props.email !== undefined ? <p className='itemEmail__itemPhoneNr'>Email: {props.email}</p> : null}
          </div>
          <button className='deleteBtn'>delete</button>
@@ -39,7 +39,7 @@ const PersonInfoElements =  PersonData.map((person) => (
       name={person.name}
       description={person.description}
       tel={person.tel}
-      email={person.email}
+      email={person.email} 
       key={person.key}
       />
  ))
