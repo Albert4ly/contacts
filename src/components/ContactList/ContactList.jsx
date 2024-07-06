@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import PersonData from '../ContactsArray'
 import './ContactList.css'
 
@@ -14,25 +15,29 @@ const ContactListGroupName = ({ groupName }) => {
 }
 
 
-const PersonalCard = ( props ) => {
+
+
+const PersonalCard = (props) => {
+
    return (
       <article className='itemCnt'>
          <div className='itemDescript'>
-           <img className="avatar__itemDescript" src="" alt="" />
-            <div  className='mainDescriptData__itemDescript'>
-              <h3  className='contactName__itemDescript'>{props.name}</h3>
+            <img className="avatar__itemDescript" src="" alt="" />
+            <div className='mainDescriptData__itemDescript'>
+               <h3 className='contactName__itemDescript'>{props.name}</h3>
                <p className='contactDescript__itemDescript'>{props.description}</p>
             </div>
          </div>
          <hr />
          <div className='itemMainData'>
-            { props.tel !== undefined ? <p className='itemPhoneNr__itemMainData'>{props.tel}</p> : null }
-            { props.email !== undefined ? <p className='itemEmail__itemPhoneNr'>Email: {props.email}</p> : null}
+            {props.tel !== undefined ? <p className='itemPhoneNr__itemMainData'>Phone: {props.tel}</p> : null}
+            {props.email !== undefined ? <p className='itemEmail__itemPhoneNr'>Email: {props.email}</p> : null}
          </div>
-         <button className='deleteBtn'>delete</button>
-     </article>
+         <button className='deleteBtn' type='button' >delete</button>
+      </article>
    )
 }
+
 
 const PersonInfoElements =  PersonData.map((person) => (
    <PersonalCard
