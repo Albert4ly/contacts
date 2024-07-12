@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PersonData from '../ContactsArray'
+import AddContactsForm from '../AddContactsForm/AddContactsForm'
 import './ContactList.css'
 
 const ComponentName = () => {
@@ -33,7 +34,7 @@ const PersonalCard = (props) => {
             {props.tel !== undefined ? <p className='itemPhoneNr__itemMainData'>Phone: {props.tel}</p> : null}
             {props.email !== undefined ? <p className='itemEmail__itemPhoneNr'>Email: {props.email}</p> : null}
          </div>
-         <button className='deleteBtn' type='button' >delete</button>
+         <button className='deleteBtn' type='button'>delete</button>
       </article>
    )
 }
@@ -50,10 +51,12 @@ const PersonInfoElements =  PersonData.map((person) => (
  ))
 
 const ContactList = () => {
+
    return (
       <>
          <ComponentName />
          <ContactListGroupName groupName="BusinessContacts" />
+         <AddContactsForm />
          <div className='listOfItems'>
             {PersonInfoElements}
          </div>
