@@ -1,27 +1,13 @@
-import { useState } from 'react'
+import React from 'react'
 import PersonData from '../ContactsArray'
-import AddContactsForm from '../AddContactsForm/AddContactsForm'
-import './ContactList.css'
+import { ComponentName } from '../ComponentName/Componentname'
+import { ContactListGroupName } from '../ContactListGroupName/ContactListGroupName'
+import CSS from "./ContactList.css"
 
-const ComponentName = () => {
-   return (
-      <h1>ContactList</h1>
-   )
-}
-
-const ContactListGroupName = ({ groupName }) => {
-   return (
-      <h2>{groupName}</h2>
-  )
-}
-
-
-
-
-const PersonalCard = (props) => {
+const PersonalCard = (props: { name: string, description: string, tel: number | undefined, email: string | undefined }) => {
 
    return (
-      <article className='itemCnt'>
+      <article className='.P'>
          <div className='itemDescript'>
             <img className="avatar__itemDescript" src="" alt="" />
             <div className='mainDescriptData__itemDescript'>
@@ -37,6 +23,7 @@ const PersonalCard = (props) => {
          <button className='deleteBtn' type='button'>delete</button>
       </article>
    )
+   
 }
 
 
@@ -50,13 +37,12 @@ const PersonInfoElements =  PersonData.map((person) => (
       />
  ))
 
-const ContactList = () => {
-
+const ContactList: React.FC = () => {
+   
    return (
       <>
-         <ComponentName />
-         <ContactListGroupName groupName="BusinessContacts" />
-         <AddContactsForm />
+         <ComponentName content="" />
+         <ContactListGroupName content="BusinessContacts" />
          <div className='listOfItems'>
             {PersonInfoElements}
          </div>
