@@ -3,12 +3,18 @@
    padding: 0;
 }
 
-article {
-   background-color: blueviolet;
+.itemCard {
+   border: 2px solid brown;
+   margin-bottom: 3px;
+   position: absolute;
 }
 
 .listOfItems{
    padding-top: 40px;
+   width: 33%;
+   position: relative;
+   display: flex;
+   flex-direction: column;
 }
 
 .itemCnt {

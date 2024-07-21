@@ -2,12 +2,12 @@ import React from 'react'
 import PersonData from '../ContactsArray'
 import { ComponentName } from '../ComponentName/Componentname'
 import { ContactListGroupName } from '../ContactListGroupName/ContactListGroupName'
-import CSS from "./ContactList.css"
+import "./ContactList.css"
 
 const PersonalCard = (props: { name: string, description: string, tel: number | undefined, email: string | undefined }) => {
 
    return (
-      <article className='.P'>
+      <article className='itemCard'>
          <div className='itemDescript'>
             <img className="avatar__itemDescript" src="" alt="" />
             <div className='mainDescriptData__itemDescript'>
