@@ -3,7 +3,7 @@ import React from 'react'
 import { ReactDOM } from 'react'
 import NavBar from './components/NavBar/NavBar'
 import { ComponentsCnt } from './containers/ComponentCnt'
-// import "./App.css"
+import "./App.css"
 
 function App() {
 
